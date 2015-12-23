@@ -1,0 +1,32 @@
+<xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>TOMCAT</name>
+            <displayName>TomCat</displayName>
+            <comment>Open-source web server</comment>
+            <version>3.0</version>
+            <components>
+                    <component>
+                    <name>TOMCAT_MASTER</name>
+                    <displayName>TomCat Master</displayName>
+                    <category>MASTER</category>
+                    <commandScript>
+                        <script>scripts/mongo_master.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>6000</timeout>
+                    </commandScript>
+                </component>
+            </components>
+           <osSpecifics>
+                <osSpecific>
+                    <osFamily>any</osFamily>
+                    <packages>
+                        <package><name>glibc</name></package>
+                    </packages>
+                </osSpecific>
+            </osSpecifics>
+        </service>
+    </services>
+</metainfo>
